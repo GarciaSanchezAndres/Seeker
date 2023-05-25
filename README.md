@@ -15,4 +15,7 @@ Pour installer les librairies nécessaires utilisez la commande suivante:
 ```
 $pip install -r requirements.txt
 ```
+How to use
+---
 
+ 
