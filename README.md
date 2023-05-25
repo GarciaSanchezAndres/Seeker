@@ -49,7 +49,7 @@ Voici les étapes pour générer ce mot de passe:
 
 Cette vidéo vous montre comment utiliser la fonctionnalité:
 
-
+[![Sending an email with Seeker](https://img.youtube.com/vi/3UuD2FBMFuk/0.jpg)](https://www.youtube.com/watch?v=3UuD2FBMFuk)
 
 A savoir
 ---
