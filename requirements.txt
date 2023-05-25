@@ -1,5 +1,5 @@
 colorama
-json
+jsonlib
 requests
 queue
 threading
