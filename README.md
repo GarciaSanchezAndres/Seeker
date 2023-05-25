@@ -29,13 +29,24 @@ $git clone https://github.com/GarciaSanchezAndres/Seeker.git
 $cd Seeker
 $python3 seeker.py
 ```
-Fonctionnalité de mail
+Fonctionnalité d'envoi de mail
 ---
-Seeker propose à l'utilisateur d'envoyer les rapports générés par mail à un destinataire de son choix. Cependant pour utiliser cette fonctionnalité avec les messageries google, il faut que l'utilisateur génère un mot de passe d'application qui lui sera demandé avant l'envoi du mail.
+Seeker propose à l'utilisateur d'envoyer les rapports générés par mail à un destinataire de son choix depuis une adresse Gmail (de nouveaux smtp seront rajoutés dans les prochaines mises à jour). La commande est la suivante:
+```
+$python3 seeker.py -r
+```
+Cependant si votre compte gmail utilise une authentication 2FA, il faudra génèrer un mot de passe d'application qui sera demandé avec l'adresse expéditeur et destinataire du mail.
 Voici les étapes pour générer ce mot de passe:
- 1) 
+ 1) Se connecter à https://myaccount.google.com/
+ 2) Cliquez sur l'onglet "Sécurité".
+ 3) Cliquez sur Validation en deux étapes
+ 4) Tout en bas de la page, cliquez sur "Mot de passe d'application"
+ 5) Selectionnez Messagerie puis votre OS.
+ 6) Le mot de passe généré devra être utilisé lors de l'envoi des mails
+
+
 
 A savoir
 ---
-1) Seeker utilise Nmap, il est donc recommandé de l'installer sur une machine **Linux**.
-2) Si les commandes ne fonctionnant pas avec **$python3** essayez avec **$python**. Example: **$python seeker.py**. Cela dépent de votre version de Python!
+- Seeker utilise Nmap, il est donc recommandé de l'installer sur une machine **Linux**.
+- Si les commandes ne fonctionnant pas avec **$python3** essayez avec **$python**. Example: **$python seeker.py**. Cela dépent de votre version de Python!
