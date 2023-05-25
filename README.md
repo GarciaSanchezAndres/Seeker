@@ -25,4 +25,6 @@ $pip install -r requirements.txt
 Installation
 ---
 ```
-$git clone 
+$git clone https://github.com/GarciaSanchezAndres/Seeker.git
+$cd Seeker
+$python3 seeker.py
