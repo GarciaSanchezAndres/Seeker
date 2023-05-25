@@ -1,6 +1,5 @@
 colorama
 jsonlib
-re
 queuelib
 threading
 bs4
@@ -10,4 +9,4 @@ nmap
 sockets
 reportlab
 hashlib
-
+requests
