@@ -19,7 +19,7 @@ Requirements
 ---
 Pour installer les librairies nécessaires utilisez la commande suivante:
 ```
-$pip install -r requirements.txt
+$pip3 install -r requirements.txt
 ```
 
 Installation
