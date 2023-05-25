@@ -30,7 +30,7 @@ $cd Seeker
 $python3 seeker.py
 ```
 
-#A savoir
+A savoir
 ---
 1) Seeker utilise Nmap, il est donc recommandé de l'installer sur une machine **Linux**.
-2) Si les commandes ne fonctionnant pas avec **$python3** essayez avec **$python**. Example: **$python seeker.py**
+2) Si les commandes ne fonctionnant pas avec **$python3** essayez avec **$python**. Example: **$python seeker.py**. Cela dépent de votre version de Python!
