@@ -1,13 +1,13 @@
 colorama
 jsonlib
-requests
-queue
+re
+queuelib
 threading
 bs4
 datetime
 xlsxwriter
 nmap
-socket
+sockets
 reportlab
 hashlib
-re
+
