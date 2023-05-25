@@ -18,5 +18,7 @@ $pip install -r requirements.txt
 ```
 How to use
 ---
+La vidéo suivante montre comment lancer un script seeker:
+
 [![Running Seeker](https://img.youtube.com/vi/k1qict_sfxo/0.jpg)](https://www.youtube.com/watch?v=k1qict_sfxo)
  
