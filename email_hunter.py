@@ -75,7 +75,7 @@ def main():
     from colorama import Fore
     
     if len(sys.argv) < 2:
-        print(Fore.LIGHTBLUE_EX + "Veuillez fournir un domaine cible.")
+        print(Fore.LIGHTBLUE_EX + "Veuillez fournir un domaine cible <DOMAINE>   --> python3 email_hunter.py example.com")
         return
 
     target = sys.argv[1]
