@@ -9,16 +9,20 @@ Overview
 ---
 ![Capture d’écran du 2023-05-25 20-08-36](https://github.com/GarciaSanchezAndres/Seeker/assets/82510284/191fc80b-6b0c-4629-be6d-0c94ea72a92c)
 
-
-Requirements
----
-Pour installer les librairies nécessaires utilisez la commande suivante:
-```
-$pip install -r requirements.txt
-```
 How to use
 ---
 La vidéo suivante montre comment lancer un script seeker:
 
 [![Running Seeker](https://img.youtube.com/vi/k1qict_sfxo/0.jpg)](https://www.youtube.com/watch?v=k1qict_sfxo)
  
+Requirements
+---
+Pour installer les librairies nécessaires utilisez la commande suivante:
+```
+$pip install -r requirements.txt
+```
+
+Installation
+---
+```
+$git clone 
