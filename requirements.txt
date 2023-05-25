@@ -1,0 +1,13 @@
+colorama
+json
+requests
+queue
+threading
+bs4
+datetime
+xlsxwriter
+nmap
+socket
+reportlab
+hashlib
+re
