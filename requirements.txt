@@ -4,7 +4,6 @@ threading
 bs4
 datetime
 xlsxwriter
-nmap
 sockets
 reportlab
 hashlib
