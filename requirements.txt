@@ -1,6 +1,5 @@
 colorama
 jsonlib
-queuelib
 threading
 bs4
 datetime
