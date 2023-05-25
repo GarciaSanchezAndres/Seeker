@@ -6,5 +6,4 @@ datetime
 xlsxwriter
 sockets
 reportlab
-hashlib
 requests
