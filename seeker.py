@@ -1,6 +1,14 @@
 import argparse
 import colorama                       
 from colorama import Fore
+import smtplib
+import os
+import shutil
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+from email.mime.application import MIMEApplication
+import getpass
+
 
 banner = Fore.LIGHTRED_EX + """
                                ___                              
@@ -57,31 +65,55 @@ def sous_menu_script_e():
 
 def main():
     parser = argparse.ArgumentParser(prog='seeker.py', description='Programme Boîte à outils Seeker', add_help=False)
-    parser.add_argument('-h', '--aide_menu', action='store_true', help='afficher le menu d\'aide')
+    parser.add_argument('-h', '--aide_menu', action='store_true', help="afficher le menu d'aide")
+    parser.add_argument('-r', '--send_rapports', action='store_true', help="envoyer le répertoire Rapports par email")
     args, _ = parser.parse_known_args()
 
     if args.aide_menu:
         menu_principal()
-        option = input(Fore.LIGHTYELLOW_EX + "\nEntrez le numéro de l'outils : ")
-        if option == '1':
-            sous_menu_script_a()
-        elif option == '2':
-            sous_menu_script_b()
-        elif option == '3':
-            sous_menu_script_c()
-        elif option == '4':
-            sous_menu_script_d()
-        elif option == '5':
-            sous_menu_script_e()
-        elif option == '6':
-            print("Sortie...")
-        else:
-            print(Fore.RED + "Option invalide.")
+        # Rest of the code for displaying the menu
+
+    elif args.send_rapports:
+        sender_email = input(Fore.LIGHTBLUE_EX + "Entrez votre adresse email : ")
+        sender_password = getpass.getpass(Fore.LIGHTBLUE_EX + "Entrez votre mot de passe (sera masqué) : ")
+        receiver_email = input(Fore.LIGHTBLUE_EX + "Entrez l'adresse email du destinataire : ")
+
+        subject = "Votre rapport Seeker"
+        body = "Voici le dernier rapport généré par Seeker."
+
+        # Create a multipart message and set the headers
+        message = MIMEMultipart()
+        message["From"] = sender_email
+        message["To"] = receiver_email
+        message["Subject"] = subject
+
+        # Add body text to the email
+        message.attach(MIMEText(body, "plain"))
+
+        # Compress the Rapports directory into a zip file
+        shutil.make_archive("Rapports", "zip", "Rapports")
+
+        # Attach the zip file to the email
+        with open("Rapports.zip", "rb") as attachment:
+            part = MIMEApplication(attachment.read())
+            part.add_header("Content-Disposition", "attachment", filename="Rapports.zip")
+            message.attach(part)
+
+        # Send the email
+        with smtplib.SMTP_SSL("smtp.gmail.com", 465) as server:
+            server.login(sender_email, sender_password)
+            server.send_message(message)
+
+        # Delete the temporary zip file
+        os.remove("Rapports.zip")
+
+        print(Fore.LIGHTGREEN_EX + "Le dossier Rapports a été envoyé par email.")
     else:
         print(banner)
         print(Fore.LIGHTCYAN_EX + "Bienvenue sur Seeker : Votre toolbox de cybersécurité polyvalent!")
         print(Fore.LIGHTBLUE_EX + "\nSeeker est un toolbox polyvalent qui regroupe des fonctionnalités avancées pour protéger vos données\net assurer la sécurité de vos systèmes. Avec son interface conviviale et ses capacités étendues, Seeker vous permet\nde prendre des mesures proactives pour sécuriser vos infrastructures et minimiser les risques.")
-        print(Fore.LIGHTYELLOW_EX + "Vous pouvez accéder au menu d'aide en utilisant 'python3 seeker.py -h'.")
+        print(Fore.LIGHTYELLOW_EX + "1) Accéder au menu d'aide en utilisant:" + Fore.LIGHTRED_EX +"'python3 seeker.py -h'")
+        print(Fore.LIGHTYELLOW_EX + "2) Envoyez votre rapport par mail à un destinataire de votre choix (uniquement depuis Gmail):" + Fore.LIGHTRED_EX +"'python3 seeker.py -r'")
 
 if __name__ == '__main__':
     main()
