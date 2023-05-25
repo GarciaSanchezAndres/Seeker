@@ -29,6 +29,11 @@ $git clone https://github.com/GarciaSanchezAndres/Seeker.git
 $cd Seeker
 $python3 seeker.py
 ```
+Fonctionnalité de mail
+---
+Seeker propose à l'utilisateur d'envoyer les rapports générés par mail à un destinataire de son choix. Cependant pour utiliser cette fonctionnalité avec les messageries google, il faut que l'utilisateur génère un mot de passe d'application qui lui sera demandé avant l'envoi du mail.
+Voici les étapes pour générer ce mot de passe:
+ 1) 
 
 A savoir
 ---
