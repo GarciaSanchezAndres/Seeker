@@ -1,6 +1,5 @@
 colorama
 jsonlib
-threading
 bs4
 datetime
 xlsxwriter
