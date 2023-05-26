@@ -53,5 +53,5 @@ Cette vidéo vous montre comment utiliser la fonctionnalité:
 
 A savoir
 ---
-- Seeker utilise Nmap, il est donc recommandé de l'installer sur une machine **Linux**.
+- Seeker utilise Nmap pour certaines de ces fonctions, il est donc fortement recommandé de l'installer sur une machine **Linux**.
 - Si les commandes ne fonctionnant pas avec **$python3** essayez avec **$python**. Example: **$python seeker.py**. Cela dépent de votre version de Python!
