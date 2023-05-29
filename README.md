@@ -19,21 +19,21 @@ Requirements
 ---
 Pour installer les librairies nécessaires utilisez la commande suivante:
 ```
-$pip3 install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 Installation
 ---
 ```
-$git clone https://github.com/GarciaSanchezAndres/Seeker.git
-$cd Seeker
-$python3 seeker.py
+git clone https://github.com/GarciaSanchezAndres/Seeker.git
+cd Seeker
+python3 seeker.py
 ```
 Fonctionnalité d'envoi de mail
 ---
 Seeker propose à l'utilisateur d'envoyer les rapports générés par mail à un destinataire de son choix depuis une adresse Gmail (de nouveaux smtp seront rajoutés dans les prochaines mises à jour). La commande est la suivante:
 ```
-$python3 seeker.py -r
+python3 seeker.py -r
 ```
 Cependant si votre compte gmail utilise une authentication 2FA, il faudra génèrer un mot de passe d'application qui sera demandé avec l'adresse expéditeur et destinataire du mail.
 Voici les étapes pour générer ce mot de passe:
@@ -52,7 +52,7 @@ Fonctionnalité de suppression de Rapports
 ---
 Il se peut que vous vouliez effacer ce qui se trouve dans le dossier Rapports car le contenu ne vous intéresse plus. Pour cela vous pouvez utiliser la commande:
 ```
-$python3 seeker.py -d
+python3 seeker.py -d
 ```
 Cette fonctionalité est utile lorsque vous voulez génerer de nouveaux rapports pour les envoyer via mail. En effet si vous n'effacez pas le dossier avant de l'envoyer, l'ancien contenu sera envoyé avec le nouveau.
 
