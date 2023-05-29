@@ -51,6 +51,14 @@ Cette vidéo vous montre comment utiliser la fonctionnalité:
 
 [![Sending an email with Seeker](https://img.youtube.com/vi/3UuD2FBMFuk/0.jpg)](https://www.youtube.com/watch?v=3UuD2FBMFuk)
 
+Fonctionnalité de suppression de Rapports
+---
+Il se peut que vous vouliez effacer ce qui se trouve dans le dossier Rapports car le contenu ne vous intéresse plus. Pour cela vous pouvez utiliser la commande:
+```
+$python3 seeker.py -d
+```
+Cette fonctionalité est utile lorsque vous voulez génerer de nouveaux rapports pour les envoyer via mail. En effet si vous n'effacez pas le dossier avant de l'envoyer, l'ancien contenu sera envoyé avec le nouveau.
+
 A savoir
 ---
 - Seeker utilise Nmap pour certaines de ces fonctions, il est donc fortement recommandé de l'installer sur une machine **Linux**.
