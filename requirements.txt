@@ -1,5 +1,4 @@
 colorama
-jsonlib
 bs4
 datetime
 xlsxwriter
