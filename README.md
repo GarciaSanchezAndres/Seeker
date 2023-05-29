@@ -38,13 +38,10 @@ $python3 seeker.py -r
 Cependant si votre compte gmail utilise une authentication 2FA, il faudra génèrer un mot de passe d'application qui sera demandé avec l'adresse expéditeur et destinataire du mail.
 Voici les étapes pour générer ce mot de passe:
  1) Se connecter à https://myaccount.google.com/
- 2) Cliquez sur l'onglet "Sécurité".
+ 2) Cliquez sur l'onglet "Sécurité"
  3) Cliquez sur Validation en deux étapes
  4) Tout en bas de la page, cliquez sur "Mot de passe d'application"
  5) Selectionnez Messagerie puis votre OS. Votre mot passe sera généré (vous devez le noter)
- 
-![image](https://github.com/GarciaSanchezAndres/Seeker/assets/82510284/c680c35a-06c4-497c-99dc-11796e7fb607)
-
  6) Le mot de passe généré devra être utilisé lors de l'envoi des mails
 
 Cette vidéo vous montre comment utiliser la fonctionnalité:
